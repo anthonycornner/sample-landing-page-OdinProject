@@ -1,0 +1,35 @@
+.sec-1-container{
+    background-color: #1f2937;
+    display: flex;
+    overflow: auto;
+}
+
+.header-logo-item {
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    margin-right: auto;
+}
+
+.header-logo-item img {
+    width: 100%;
+    padding-top: 30px;
+    padding-left: 40px;
+}
+
+.header-links {
+    display: flex;
+    
+}
+
+.header-links a, a:visited {
+    margin-left: 15px;
+    padding-right: 30px;
+    padding-top: 40px;
+    text-decoration: none;
+    color: #f9faf8;
+}
+
+.header-links .links-3 {
+    margin-right: 140px;
+}
