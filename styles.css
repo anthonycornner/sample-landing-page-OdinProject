@@ -1,0 +1,73 @@
+@import 'meyer-reset.css';
+
+/* SETUP */
+
+* {
+    box-sizing: border-box;
+}
+
+picture {
+    display: block;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height:auto;
+}
+
+a {
+    color:inherit;
+    text-decoration: none;
+}
+
+/* DEV STYLES */
+
+/* body * {
+    border: 1px solid blue;
+    padding: 2px;
+} */
+
+/*STRUCTURE*/
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main {
+    flex-grow: 1;
+}
+
+inner-column {
+    display: block;
+    border: 4px solid orange;
+    padding: 10px;
+}
+
+/*COMPONENTS*/
+
+
+
+/*MODULES*/
+graphic-welcome {
+    display: block;
+    border: 2px solid blue;
+}
+
+graphic-welcome text-content {
+    display: block;
+    border: 2px solid blue;
+}
+
+graphic-welcome picture {
+    display: block;
+    border: 2px solid blue;
+}
+
+@media (min-width: 700px){
+    graphic-welcome{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
