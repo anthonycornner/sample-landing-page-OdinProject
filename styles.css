@@ -1,5 +1,15 @@
 @import 'meyer-reset.css';
 
+/* COLOR SETTINGS */
+
+html {
+    --darkerBack: #1f2937;
+    --lightWhiteText: #f9faf8;
+    --darkWhiteText: #e5e7eb;
+    --brightBlue: #3882f6;
+    
+}
+
 /* SETUP */
 
 * {
@@ -26,12 +36,20 @@ p a {
     display: inline-block;
 }
 
+
+header, .welcome-splash, footer {
+    background-color: var(--darkerBack);
+}
+
 /* DEV STYLES */
 
 /* body * {
     border: 1px solid blue;
     padding: 2px;
 } */
+/* inner-column{
+    border: 4px solid orange;
+ } */
 
 /*STRUCTURE*/
 
@@ -46,36 +64,45 @@ main {
 
 inner-column {
     display: block;
-    border: 4px solid orange;
-    padding: 10px;
+    padding: 10vh 0;
     width: 95%;
-    max-width: 900px;
+    max-width: 80vmax;
     margin-right: auto;
     margin-left: auto;
+}
+
+header inner-column, footer inner-column {
+    padding: 10px;
 }
 
 /*TYPOGRAPHY*/
 .hero-main-text {
     font-size: 48px;
-    font-weight: bolder;
+    font-weight: 900;
     line-height: .9;
-    color: black;
-    /* color: #f9faf8 */
+    color: var(--lightWhiteText);
 }
 
-.hero-secondary-text {
+@media (min-width: 600px) {
+    .hero-main-text {
+        font-size: 65px;
+    }
+}
+
+.hero-secondary-text, header, footer h2{
     font-size: 18px;
     line-height: 1.5;
-    color: black;
-    /* color: #e5e7eb; */
+    color: var(--darkWhiteText);
 }
+
+
 
 /*COMPONENTS*/
 
 .btn {
     display: inline-block;
-    background-color: #3882f6 ;
-    color: #e5e7eb;
+    background-color: var(--brightBlue);
+    color: var(--darkWhiteText);
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 10px;
@@ -85,24 +112,52 @@ inner-column {
 /*MODULES*/
 graphic-welcome {
     display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* padding: 10vh 0; */
+}
+
+graphic-welcome picture {
+    display: block;
+    max-width: 500px;
 }
 
 graphic-welcome text-content {
     display: block;
 }
 
-graphic-welcome picture {
-    display: block;
+graphic-welcome text-content p {
+    margin-top: 20px;
+}
+
+graphic-welcome text-content .btn{
+    margin-top: 20px;
 }
 
 @media (min-width: 700px){
     graphic-welcome{
-        display: flex;
+        /* display: flex; */
         flex-direction: row-reverse;
-        gap: 30px;
+        /* gap: 30px; */
     }
     graphic-welcome :is(text-content, picture){
         flex-basis: 50%;
-        border: 1px solid blue;
+        /* border: 1px solid blue; */
     }
+}
+
+projects-grid {
+    display: block;
+}
+
+projects-grid .projects-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-gap:1em;
+}
+
+.projects-list .project {
+    border: 2px solid blue;
+    border-radius: 5px;
 }
