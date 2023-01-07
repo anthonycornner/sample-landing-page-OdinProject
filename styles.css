@@ -5,7 +5,7 @@
 html {
     --darkerBack: #1f2937;
     --lightWhiteText: #f9faf8;
-    --darkWhiteText: #e5e7eb;
+    --darkWhite: #e5e7eb;
     --brightBlue: #3882f6;
     font-family: 'Helvetica', sans-serif;
     
@@ -16,7 +16,7 @@ header, .welcome-splash, footer {
 }
 
 .quote-splash {
-    background-color: var(--darkWhiteText);
+    background-color: var(--darkWhite);
 }
 
 /* SETUP */
@@ -113,7 +113,7 @@ header outer-column, footer outer-column {
 .hero-secondary-text, header, footer h2{
     font-size: 18px;
     line-height: 1.5;
-    color: var(--darkWhiteText);
+    color: var(--darkWhite);
 }
 
 .hero-third-text {
@@ -132,7 +132,7 @@ header outer-column, footer outer-column {
 .btn {
     display: inline-block;
     background-color: var(--brightBlue);
-    color: var(--darkWhiteText);
+    color: var(--darkWhite);
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 10px;
@@ -238,4 +238,25 @@ quote{
     display: flex;
     flex-direction: column;
     padding-bottom: 10px;
+}
+.quote-text{
+    font-size: 36px;
+    font-style: italic;
+    font-weight: lighter;
+    padding-bottom: 15px;
+    float: left;
+    clear: both;
+    color: #575757;
+}
+
+.author-text {
+    font-size: 36px;
+    font-weight: 600;
+    float:right;
+    color: var(--darkerBack);
+}
+
+footer h2 {
+    justify-content: center;
+    text-align: center;
 }
