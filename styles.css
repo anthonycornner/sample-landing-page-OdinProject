@@ -7,6 +7,7 @@ html {
     --lightWhiteText: #f9faf8;
     --darkWhiteText: #e5e7eb;
     --brightBlue: #3882f6;
+    font-family: 'Helvetica', sans-serif;
     
 }
 
@@ -66,7 +67,7 @@ inner-column {
     display: block;
     padding: 10vh 0;
     width: 95%;
-    max-width: 80vmax;
+    max-width: 95vmax;
     margin-right: auto;
     margin-left: auto;
 }
@@ -95,7 +96,16 @@ header inner-column, footer inner-column {
     color: var(--darkWhiteText);
 }
 
+.hero-third-text {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: .7;
+    color: var(--darkerBack)
+}
 
+/* .hero-main-text, .hero-secondary-text, .hero-third-text{
+    font-family: var(--fontFam);
+} */
 
 /*COMPONENTS*/
 
@@ -121,6 +131,11 @@ graphic-welcome {
 graphic-welcome picture {
     display: block;
     max-width: 500px;
+    /* border-radius: 8px; */
+}
+
+graphic-welcome picture img{
+    border-radius: 8px;
 }
 
 graphic-welcome text-content {
@@ -149,6 +164,22 @@ graphic-welcome text-content .btn{
 
 projects-grid {
     display: block;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+project-grid .project-card {
+    display: block;
+}
+
+project-grid .project-card picture{
+    display: block;
+}
+
+projects-grid .hero-third-text{
+    text-align: center;
+    padding-bottom: 30px;
 }
 
 projects-grid .projects-list{
@@ -158,6 +189,14 @@ projects-grid .projects-list{
 }
 
 .projects-list .project {
-    border: 2px solid blue;
+    display:block;
+    
+}
+
+project-card img {
+    max-width:250px;
+    max-height: 250px;
+    object-fit: cover;
+    border-color: #3882f6;
     border-radius: 5px;
 }
