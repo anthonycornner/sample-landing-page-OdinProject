@@ -11,6 +11,14 @@ html {
     
 }
 
+header, .welcome-splash, footer {
+    background-color: var(--darkerBack);
+}
+
+.quote-splash {
+    background-color: var(--darkWhiteText);
+}
+
 /* SETUP */
 
 * {
@@ -37,11 +45,6 @@ p a {
     display: inline-block;
 }
 
-
-header, .welcome-splash, footer {
-    background-color: var(--darkerBack);
-}
-
 /* DEV STYLES */
 
 /* body * {
@@ -62,17 +65,34 @@ body {
 main {
     flex-grow: 1;
 }
-
-inner-column {
+outer-column {
     display: block;
     padding: 10vh 0;
     width: 95%;
-    max-width: 95vmax;
+    max-width: 70vmax;
     margin-right: auto;
     margin-left: auto;
 }
 
-header inner-column, footer inner-column {
+inner-column {
+    display: block;
+    padding: 10vh 0;
+    width: 75%;
+    max-width: 55vmax;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+dblinner-column {
+    display: block;
+    padding: 10vh 0;
+    width: 65%;
+    max-width: 45vmax;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header outer-column, footer outer-column {
     padding: 10px;
 }
 
@@ -140,6 +160,7 @@ graphic-welcome picture img{
 
 graphic-welcome text-content {
     display: block;
+
 }
 
 graphic-welcome text-content p {
@@ -150,17 +171,7 @@ graphic-welcome text-content .btn{
     margin-top: 20px;
 }
 
-@media (min-width: 700px){
-    graphic-welcome{
-        /* display: flex; */
-        flex-direction: row-reverse;
-        /* gap: 30px; */
-    }
-    graphic-welcome :is(text-content, picture){
-        flex-basis: 50%;
-        /* border: 1px solid blue; */
-    }
-}
+
 
 projects-grid {
     display: block;
@@ -199,4 +210,32 @@ project-card img {
     object-fit: cover;
     border-color: #3882f6;
     border-radius: 5px;
+}
+
+@media (min-width: 900px){
+    graphic-welcome{
+        /* display: flex; */
+        flex-direction: row-reverse;
+        /* gap: 30px; */
+    }
+    graphic-welcome :is(text-content, picture){
+        flex-basis: 70%;
+        /* border: 1px solid blue; */
+    }
+}
+
+@media (min-width: 300px){
+    projects-grid{
+        flex-direction: column;
+    }
+    projects-grid :is(project-card, picture, text-content){
+        flex-basis: 25%;
+    }
+}
+
+quote{
+    display:block;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
 }
