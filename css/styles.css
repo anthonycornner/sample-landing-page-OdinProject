@@ -66,9 +66,9 @@ main {
     flex-grow: 1;
 }
 outer-column {
-    display: block;
+    display: flex;
     padding: 10vh 0;
-    width: 95%;
+    width: 85%;
     max-width: 70vmax;
     margin-right: auto;
     margin-left: auto;
@@ -106,7 +106,7 @@ header outer-column, footer outer-column {
 
 @media (min-width: 600px) {
     .hero-main-text {
-        font-size: 65px;
+        font-size: 110px;
     }
 }
 
@@ -165,6 +165,64 @@ header outer-column, footer outer-column {
 
 
 /*MODULES*/
+
+.head-container {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    margin-top: 10px;
+    /* float: left;
+    clear: both; */
+}
+
+.menu-container {
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+    text-align: right;
+    margin-top: 10px;
+    /* float: right;
+    margin-right: auto; */
+}
+
+.menu-drop-btn{
+    display: none;
+    /* width: 50px;
+    height: 50px; */
+
+}
+
+.menu-drop-btn{
+
+}
+
+.link-1, .link-2, .link-3 {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.link:hover {
+    color: var(--brightBlue);
+}
+
+@media (max-width: 784px){
+    .menu-container{
+        flex-direction: column;
+    }
+    .link{
+        flex-direction: column;
+        padding: 20px 10px;
+        display: none;
+    }
+    .menu-drop-btn {
+        display: block;
+    }
+
+    .active {
+        display: block;
+    }
+}
+
 graphic-welcome {
     display: block;
     display: flex;
@@ -175,7 +233,7 @@ graphic-welcome {
 
 graphic-welcome picture {
     display: block;
-    max-width: 500px;
+    max-width: 800px;
     /* border-radius: 8px; */
 }
 
@@ -287,7 +345,8 @@ quote{
 c2a-container {
     display: block;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width:100%;
     gap: 30px;
     padding-bottom: 10px;
     background-color: var(--brightBlue);
@@ -298,6 +357,7 @@ c2a-container text-content{
     display: block;
     display: flex;
     flex-direction: column;
+    margin:0;
     /* margin-top: 20px; */
     /* margin-bottom: 20px; */
     /* padding:2vh 5vh; */
