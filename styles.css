@@ -123,6 +123,19 @@ header outer-column, footer outer-column {
     color: var(--darkerBack)
 }
 
+.hero-fourth-text {
+    font-size: 28px;
+    font-weight: 900;
+    line-height: .9;
+    color: var(--lightWhiteText);
+}
+
+.hero-fifth-text {
+    font-size: 18px;
+    line-height: 1.5;
+    color: var(--lightWhiteText);
+}
+
 /* .hero-main-text, .hero-secondary-text, .hero-third-text{
     font-family: var(--fontFam);
 } */
@@ -136,6 +149,17 @@ header outer-column, footer outer-column {
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 10px;
+}
+
+.btn-btm {
+    display: inline-block;
+    background-color: var(--brightBlue);
+    color: var(--darkWhite);
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: var(--lightWhiteText);
+    border-radius: 10px;
+    float: right;
 }
 
 
@@ -170,8 +194,6 @@ graphic-welcome text-content p {
 graphic-welcome text-content .btn{
     margin-top: 20px;
 }
-
-
 
 projects-grid {
     display: block;
@@ -254,6 +276,46 @@ quote{
     font-weight: 600;
     float:right;
     color: var(--darkerBack);
+}
+
+c2a-container {
+    display:block;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px;
+    background-color: var(--brightBlue);
+    border-radius: 10px;
+}
+
+c2a-container text-content{
+    display: block;
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    /* padding:2vh 5vh; */
+}
+
+c2a-container text-content p{
+    display: block;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    /* margin-bottom: 20px; */
+    
+}
+
+c2a-container text-content a{
+    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    /* padding:2vh 5vh; */
+}
+
+@media (min-width: 300px){
+
 }
 
 footer h2 {
