@@ -203,19 +203,20 @@ header outer-column, footer outer-column {
 
 @media (max-width: 784px){
     .menu-container{
+        display: flex;
         flex-direction: column;
     }
-    .link{
-        flex-direction: column;
-        padding: 20px 10px;
+    .menu-container .link{
         display: none;
     }
     .menu-drop-btn {
         display: block;
+        top: 0;
     }
 
-    .active {
+    .link.active {
         display: block;
+        padding: 20px 10px;
     }
 }
 
