@@ -72,10 +72,11 @@ outer-column {
     max-width: 70vmax;
     margin-right: auto;
     margin-left: auto;
+    justify-content: center;
 }
 
 inner-column {
-    display: block;
+    display: flex;
     padding: 10vh 0;
     width: 75%;
     max-width: 55vmax;
@@ -142,6 +143,21 @@ header outer-column, footer outer-column {
 
 /*COMPONENTS*/
 
+#trailer {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border-radius: 20px;
+
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 10000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 500ms ease;
+}
+
 .btn {
     display: inline-block;
     background-color: var(--brightBlue);
@@ -151,20 +167,21 @@ header outer-column, footer outer-column {
     border-radius: 10px;
 }
 
-.btn-btm {
-    display: block;
+.button {
     background-color: var(--brightBlue);
     color: var(--darkWhite);
     font-size: 1rem;
-    padding: 10px 20px;
     border: var(--lightWhiteText);
-    border-width: 2px;
     border-radius: 5px;
-    float: right;
+    box-shadow: 0 0 0 3px white;
 }
 
 
 /*MODULES*/
+
+body:hover > #trailer {
+    opacity: 1;
+}
 
 .head-container {
     display: inline-block;
@@ -340,57 +357,48 @@ quote{
 }
 
 c2a-container {
-    display: block;
     display: flex;
-    flex-direction: row;
-    width:100%;
-    gap: 30px;
-    padding-bottom: 10px;
+    flex-direction: column;
+    width: 100%;
     background-color: var(--brightBlue);
     border-radius: 10px;
+    justify-content: space-between;
 }
+
+@media (min-width: 800px) {
+    c2a-container {
+        flex-direction: row;
+    }
+    c2a-container text-content, c2a-container .button {
+        flex-basis: 90%;
+        flex-direction: column;
+    }
+}
+
+/* c2a-container text-content, c2a-container button{
+    display: flex;
+    flex-direction: row;
+} */
 
 c2a-container text-content{
-    display: block;
-    display: flex;
-    flex-direction: column;
-    margin:0;
-    /* margin-top: 20px; */
-    /* margin-bottom: 20px; */
-    /* padding:2vh 5vh; */
-}
-
-c2a-container text-content p{
-    display: block;
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    justify-content: flex-start;
     
 }
 
-c2a-container button a{
-    display: inline-block;
+c2a-container .button{
     display: flex;
-    flex-direction: row;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    /* padding:2vh 5vh; */
-}
-
-@media (min-width: 800px){
-    c2a-container{
-        /* display: flex; */
-        flex-direction: row;
-        /* gap: 30px; */
-    }
-    c2a-container :is(text-content, button){
-        flex-basis: 50%;
-        /* border: 1px solid blue; */
-    }
+    justify-content: center;
+    justify-self: flex-end;
+    align-items: center;
+    width: 1%;
+    max-width: 200px;
+    text-align: center;
+    border-radius: 15px;
+    border: 2px solid white;
 }
 
 footer h2 {
     justify-content: center;
+    align-items: center;
     text-align: center;
 }
